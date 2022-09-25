@@ -241,3 +241,15 @@ ls
 cd abhi_suchita06/
 git init
 ls -a
+git add .
+git status
+git commit -m "1st commit"
+git config --global user.email abhishek.rishi4u@gmail.com
+git config --global user.name Rishiabhishek92
+git commit -m "1st commit"
+git status
+git log --oneline
+git log 
+git remote add origin https://github.com/Rishiabhishek92/deplyoment-file.git
+git push -u origin master
+mkdir file1
