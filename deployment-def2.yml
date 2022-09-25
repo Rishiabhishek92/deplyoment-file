@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomee-deploy
+  labels:
+    type: webserver
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: webserver
+  template:
+    metadata:
+      name: tomee-pod
+      labels:
+        type: webserver
+    spec:
+      containers:
+        - name: mytomee
+          image: tomee
+          ports:
+            - containerPort: 8080
+              hostPort: 8081
+...                
+
